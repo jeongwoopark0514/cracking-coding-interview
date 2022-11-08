@@ -1,5 +1,5 @@
 
-public class MyAnswer {
+public class Unique {
 
 //    hint #44, #117, #132
     public static boolean isUnique(String str) {
