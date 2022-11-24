@@ -28,7 +28,7 @@ public class StringRotation {
         return isSubstring(s2, sbFront.toString());
     }
 
-    // se will always be the substring of s1s1.
+    // se will always be the substring of s1s1.s
     public static boolean isRotation(String s1, String s2) {
         int len = s1.length();
         if(len == s2.length() && len > 0) {

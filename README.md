@@ -38,3 +38,20 @@ Inserting N elements takes O(N) work total. Each insertion is O(1) on average, e
 
 ### StringBuilder
 StringBuilder simply creates a resizable array of all the strings, copying them back to a string only when necessary.
+
+## Linked List
+
+In a singly linked list, each node points to the next node in the linked list. A doubly linked list gives each node pointers to both the next node and the previous node.
+
+Unlike an array, to find the Kth element in the list, you will need to iterate through K elements.
+
+### Deleting a Node
+You should set prev.next equal to n.next. If the list is doubly linked, also update n.next to set n.next.prev equal to n.prev.
+The important things to remember are (1) to check for the null pointer and (2) to update the head or tail pointer as necessary.
+
+### The Runner Technique
+The runner technique is used in many linked list problems. The runner technique means that you iterate though the linked list with two pointers simultaneously, with one ahead of the other.
+
+### Recursive Problems
+A number of linked list problems rely on recursion. IF you're having trouble solving a linked list problem you should explore if a recursive approach will work. 
+You should remember tha recursive algorithms take at least O(n) space, where n is the depth of the recursive call.
