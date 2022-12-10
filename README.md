@@ -55,3 +55,30 @@ The runner technique is used in many linked list problems. The runner technique 
 ### Recursive Problems
 A number of linked list problems rely on recursion. IF you're having trouble solving a linked list problem you should explore if a recursive approach will work. 
 You should remember tha recursive algorithms take at least O(n) space, where n is the depth of the recursive call.
+
+## Stacks and Queues
+
+
+### Implementing a Stack
+A stack uses LIFO ordering.
+
+* pop()
+* push(item)
+* peek()
+* isEmpty()
+
+Unlike an array, a stack does not offer constant-time access to the ith item. However, it does allow constant adds and removes as it does not require shifting elements around.
+Stacks are useful in certain recursive algorithms. Sometimes you need to push temporary data onto a stack as you recurse, but then remove them as you backtrack.
+Stacks can also be used to implement a recursive algorithm iteratively.
+
+### Implementing a Queue 
+A queue implements FIFO ordering.
+
+* add(item)
+* remove()
+* peek()
+* isEmpty()
+
+Queues are oftne used in breadth-first search or implementing a cache.
+In breadth-first search, for example, we used a queue to store a list of the nodes that we need to process. 
+Each time we process a node, we add its adjacent nodes to the back of the queue. This allows us to process nodes in the order in which they are viewed.
