@@ -82,3 +82,78 @@ A queue implements FIFO ordering.
 Queues are oftne used in breadth-first search or implementing a cache.
 In breadth-first search, for example, we used a queue to store a list of the nodes that we need to process. 
 Each time we process a node, we add its adjacent nodes to the back of the queue. This allows us to process nodes in the order in which they are viewed.
+
+
+## Trees and Graphs
+
+### Types of Trees
+A tree is a data structure composed of nodes.
+* Each tree has a root node.
+* The root node has zero or more child nodes.
+* Each child node has zero or more child nodes and so on.
+
+The tree cannot contain cycles. The nodes may or may not be in a particular oder, they could have any data type as values, and they may or may not have links back to their parent nodes.
+We typically do not use a Tree class.
+
+A binary tree is a tree in which each node has up to two children. Not all trees are binary trees.
+
+A node is called a leaf node if it has no children.
+
+A binary search tree is a binary tree in which every node fits a specific ordering property: all left descendents <= n < all right descendents. This must be true for each node n.
+This inequality must be true for all of a node's descendents, not just its immediate children.
+
+Two common types of balanced trees are red-black trees and AVL trees. 
+
+A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. 
+To the extent that the last level is filled, it is filled left to right.
+
+A full binary tree is a binary tree in which every node has either zero or two children. That is, no nodes have only one child.
+
+A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
+
+
+### Binary Tree Traversal
+* In-Order Traversal: In-order traversal means to visit the left branch, then the current node, and finally, the right branch.
+* Pre-Order Traversal: Pre-order traversal visits the current node before its child nodes. The root is always the first node visited.
+* Post-Order Traversal: Post-order traversal visits the current node after its child nodes. In a post-order traversal, the root is always the last node visited.
+
+### Binary Heaps (Min-Heaps and Max-Heaps)
+Max-heaps are essentially equivalent, but the elements are in descending order rather than ascending order.
+
+A min-heap is a complete binary tree (totally filled other than the rightmost elements on the last level) where each node is smaller than its children. The root, therefore, is the minimum element in the tree.
+
+* Insert: First inserte the element at the bottom and fix the tree by swapping the new element with its parents. O(log n)
+* Extract Minimum Element: We remove the minimum element and swap it with the last element in the heap.
+
+### Tries (Prefix Tree)
+A Trie is a variant of an n-ary tree in which characters are stored at each node. Each path down the tree may represent a word. 
+The * nodes (null nodes) are often used to indicate complete words. For example, the fact that there is a * node under MANY indicates that MANY is a complete word. 
+Very commonly, a trie is used to store the entire (English) language for quick prefix lookups.
+
+
+## Graphs
+A tree is actually a type of graph, but not all graphs are trees. A tree is a connected graph without cycles.
+
+* Graphs can be either directed or undirected.
+* The graph might consist of multiple isolated subgraphs. If there is a path between every pair of vertices, it is called a connected graph.
+* The graph can also have cycles (or not). An acyclic graph is one without cycles.
+
+### Adjacency List
+Most common way to represent a graph. 
+Every vertex (or node) stores a list of adjacent vertices.
+
+### Adjacency Matrices
+An adjacency matrix is an NxN boolean matrix.
+In an undirected graph, an adjacency matrix will be symmetric.
+
+### Graph Search
+In depth-first search (DFS), we start at the root and explore each branch completely before moving on to the next branch. That is, we go deep first before we go wide.
+In breadth-first search (BFS), we start at the root and explore each neighbour before going on to any of their children. That is, we go wide before we go deep.
+
+For visiting every node, DFS is preferred as it is a bit simpler.
+
+For finding a shortest path, BFS is preferred.
+
+DFS is recursive and BFS is iterative using a queue.
+
+Bidirectional search is used to find the shortest path between a source and destination node. It operates by essentially running two simultaneous breadth-first searches, one from each node. When their searches collide, we have found a path.
