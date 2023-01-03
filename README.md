@@ -45,7 +45,7 @@ In a singly linked list, each node points to the next node in the linked list. A
 
 Unlike an array, to find the Kth element in the list, you will need to iterate through K elements.
 
-### Deleting a Node
+### Deleting a Routes.Node
 You should set prev.next equal to n.next. If the list is doubly linked, also update n.next to set n.next.prev equal to n.prev.
 The important things to remember are (1) to check for the null pointer and (2) to update the head or tail pointer as necessary.
 
@@ -146,7 +146,7 @@ Every vertex (or node) stores a list of adjacent vertices.
 An adjacency matrix is an NxN boolean matrix.
 In an undirected graph, an adjacency matrix will be symmetric.
 
-### Graph Search
+### Routes.Graph Search
 In depth-first search (DFS), we start at the root and explore each branch completely before moving on to the next branch. That is, we go deep first before we go wide.
 In breadth-first search (BFS), we start at the root and explore each neighbour before going on to any of their children. That is, we go wide before we go deep.
 

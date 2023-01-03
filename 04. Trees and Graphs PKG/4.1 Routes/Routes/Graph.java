@@ -1,3 +1,5 @@
+package Routes;
+
 public class Graph {
     public static int MAX_VERTICES = 6;
     private Node nodes[];
@@ -14,7 +16,7 @@ public class Graph {
             count += 1;
         }
         else {
-            System.out.println("Graph is full");
+            System.out.println("Routes.Graph is full");
         }
     }
 
