@@ -88,7 +88,7 @@ public class TreeNode {
     }
 
     public static TreeNode createMinimalBST(int[] array, int start, int end) {
-        if(start >= end) {
+        if(start > end) {
             return null;
         }
         int middle = (start + end) / 2;
